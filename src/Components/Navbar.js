@@ -188,41 +188,41 @@ export default function Example() {
   const token = sessionStorage.getItem("token");
   const navigation = [
     {
-      name: "Home",
-      href: "/home", 
+      display: "Home",
+      url: "/home", 
     },
     {
-      name: "About",
-      href: "/about",
+      display: "About",
+      url: "/about",
     },
     {
-      name: "Courses",
-      href: "/courses",
+      display: "Courses",
+      url: "/courses",
     },
     {
-      name: "SignIn",
-      href: "/signin",
+      display: "SignIn",
+      url: "/signin",
     },
     {
-      name: "SignOut",
-      href: "/signout",
+      display: "SignOut",
+      url: "/signout",
     },
     {
-      name: "SignUp",
-      href: "/signup",
+      display: "SignUp",
+      url: "/signup",
     },
   ];
 
   // if (token) {
   //   navigation = [
   //     {
-  //       name: "Dashboard",
-  //       href: "/Profile",
+  //       display: "Dashboard",
+  //       url: "/Profile",
   //       current: location.pathname === "/Profile",
   //     },
   //     {
-  //       name: "Search Books",
-  //       href: "Search-book",
+  //       display: "Search Books",
+  //       url: "Search-book",
   //       current: location.pathname === "/Search-book",
   //     },
   //   ];
@@ -265,8 +265,8 @@ export default function Example() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
-                        key={item.name}
-                        to={item.href}
+                        key={item.display}
+                        to={item.url}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -275,7 +275,7 @@ export default function Example() {
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
-                        {item.name}
+                        {item.display}
                       </Link>
                     ))}
                   </div>
@@ -366,12 +366,12 @@ export default function Example() {
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Link
-                  key={item.name}
-                  to={item.href}
+                  key={item.display}
+                  to={item.url}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-gray-300 hover:bg-gray-900 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
