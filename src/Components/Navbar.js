@@ -2,7 +2,6 @@
 // import { Container } from "reactstrap";
 // import "./Navbar.css";
 
-
 // const navLinks = [
 //   {
 //     display: "Home",
@@ -77,19 +76,17 @@
 
 // export default Navbar;
 
-
-
 // New navbar not refreshing the page
 
 // import React, { useRef } from "react";
 // import { Container } from "reactstrap";
-// import { Link } from "react-router-dom"; 
+// import { Link } from "react-router-dom";
 // import "./Navbar.css";
 
 // const navLinks = [
 //   {
 //     display: "Home",
-//     url: "/home", 
+//     url: "/home",
 //   },
 //   {
 //     display: "About",
@@ -160,19 +157,6 @@
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -187,27 +171,25 @@ export default function Example() {
   const location = useLocation();
   const token = sessionStorage.getItem("token");
   const navigation = [
+    { name: "Home", display: "Home", url: "/home" },
+    { name: "About", display: "About", url: "/about" },
     {
-      display: "Home",
-      url: "/home", 
-    },
-    {
-      display: "About",
-      url: "/about",
-    },
-    {
+      name: "Courses",
       display: "Courses",
       url: "/courses",
     },
     {
+      name: "SignIn",
       display: "SignIn",
       url: "/signin",
     },
     {
+      name: "SignOut",
       display: "SignOut",
       url: "/signout",
     },
     {
+      name: "SignUp",
       display: "SignUp",
       url: "/signup",
     },
@@ -226,9 +208,6 @@ export default function Example() {
   //       current: location.pathname === "/Search-book",
   //     },
   //   ];
-
-    
-  
 
   const navigate = useNavigate();
   const logoutHandler = () => {
