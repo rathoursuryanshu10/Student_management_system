@@ -193,6 +193,11 @@ export default function Example() {
       display: "SignUp",
       url: "/signup",
     },
+    {
+      name: "Contact Us",
+      display: "Contact Us",
+      url: "/contact",
+    },
   ];
 
   // if (token) {
